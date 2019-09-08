@@ -13,7 +13,7 @@ The study area was defined as area approximately 12200km2 around Ballarat. This 
 3. Ballarat is one the major urban areas in Victoria and thus draws on a food from surrounding region.
 4. Ballarat is currently forecast as one of the fastest growing urban centres in Victoria with increasing urban sprawl into farmland areas.
 
-![Figure 1](https://github.com/DanielFerguson/GovHack/blob/master/readme_resources/fig-1.jpg)
+![Figure 1](https://github.com/DanielFerguson/GovHack/raw/master/readme_resources/fig-1.jpg)
 
 Figure 1: The study area defined (marked with red boundary)
 
@@ -24,7 +24,7 @@ Figure 1: The study area defined (marked with red boundary)
 #### To create raster format digital soil map layers of the soil attributes provided by the Agriculture Victoria Soils API (AgVIC Soils API) we generated a grid of points (as a shapefile) over the study area at 1km intervals with a CRS of 4326 and appended to their attribute table their x and y coordinates. Using the scripts provided elsewhere in the GitHub documentation for this project we then queried the AgVIC Soils API for each of the gps points in the grid all the soil attributes. This effectively attached to the point grid shapefile the various soil attributes.
 
 ####
-![Figure 2](https://github.com/DanielFerguson/GovHack/blob/master/readme_resources/fig-2.png)
+![Figure 2](https://github.com/DanielFerguson/GovHack/blob/master/readme_resources/fig-2.jpg)
 
 Figure 2: The 1km grid generated in QGIS for the creation of digital soil maps from the AgVIC Soils API data
 
@@ -40,7 +40,7 @@ Figure 4 Digital Soil Map Created of Electrical Conductivity (Top)
 
 For the pH attribute based on a review of the soil literature in relation to agriculture1 we determined that a pH of 6.5 was considered generally ideal for most agricultural farming land uses. Therefore or the pH (top) dataset we calculated the variance of the values from the ideal 6.5 at each datapoint in the grid. Eg. the pH ideal variance value for a location with a pH of 7.5 was calculated as 1 as would a location with a pH of 5.5. Using the same IDW method of interpolation used for the other soil attributes a raster of pH value variance from ideal was created.
 
-![Figure 5](https://github.com/DanielFerguson/GovHack/blob/master/readme_resources/fig-5.png)
+![Figure 5](https://github.com/DanielFerguson/GovHack/raw/master/readme_resources/fig-5.png)
 Figure 5: Digital Soil map of Variance of pH from 6.5 pH ideal
 
 Additional rasters were created by simply clipping the available raster layers to the study area.

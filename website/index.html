@@ -108,9 +108,56 @@
     </div>
   </div>
   <div class="container">
-    <div class="card mt-4">
-      <div class="card-body p-0">
-        <div id="mapid" style="height: 550px;"></div>
+    <div class="row">
+      <div class="col-12">
+        <div class="card mt-4">
+          <div class="card-body p-0">
+            <div id="mapid" style="height: 550px;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card mt-4">
+          <div class="card-body">
+            <h5>Legend</h5>
+            <div class="row">
+
+
+              <div class="col-3">
+                <svg width="25" height="25">
+                  <rect width="25" height="25" style="fill:rgb(77, 175, 74);" />
+                </svg>
+                Conservation
+              </div>
+
+
+              <div class="col-3">
+                <svg width="25" height="25">
+                  <rect width="25" height="25" style="fill:rgb(7, 7, 7);" />
+                </svg>
+                Urban & Infrastructure
+              </div>
+
+
+              <div class="col-3">
+                <svg width="25" height="25">
+                  <rect width="25" height="25" style="fill:transparent;stroke-width:3;stroke:rgb(240, 27, 36)" />
+                </svg>
+                Rural Living Zones
+              </div>
+
+
+              <div class="col-3">
+                <svg width="25" height="25">
+                  <rect width="25" height="25" style="fill:transparent;stroke-width:3;stroke:rgb(51, 160, 44)" />
+                </svg>
+                Agriculture Zones
+              </div>
+            </div>
+
+
+          </div>
+        </div>
       </div>
     </div>
     <small style="font-style: italic">Disclaimer! -- This visualisation is for illustrative purposes only and
@@ -764,7 +811,7 @@
         <br>
         <br>
 
-        <h5>Planning scheme zones - Vicmap Planning</h5>
+        <h5>Planning Scheme Zones - Vicmap Planning</h5>
         <p class="mb-0">
           This dataset was used to understand landuse at a broad level. The dataset was examined within desktop GIS with
           a subset of the dataset for the project study area. Land zone descriptions were reclassified into the broad
@@ -795,7 +842,7 @@
         <br>
         <br>
 
-        <h5>BOM Average annual Rainfall (Victoria)</h5>
+        <h5>BOM Average Annual Rainfall (Victoria)</h5>
         <p class="mb-0">
           The BOM Victorian rainfall grid was visualised as a raster and a subset created for the specific study area as
           variable layer in the creation of the Innovative Land Index (ILI).
@@ -810,8 +857,8 @@
         <h5>Soil and Landscape Grid National Soil Attribute Maps - Available Water Capacity (3" resolution) - Release 1
         </h5>
         <p class="mb-0">
-          The layer available water capacity 0-5cm used for this project. A clipped raster was created of this dataset
-          for the study area and included along with other complimentary datasets in the creation of the Innovative Land
+          The layer available water capacity 0-5cm is used for this project. A clipped raster was created of this
+          dataset for the study scope including other complimentary datasets in the creation of the Innovative Land
           Index (ILI).
         </p>
         <small>
@@ -853,11 +900,11 @@
           ascertain if the original data had undergone any transformation. Additionally, the datasets had to be
           converted to raster data, which could affect the accuracy of the final calculated layer. Our team has
           experience related to agricultural, water and soil data, but the algorithm used for the index is not based on
-          expert consensus and therefore, it should not be relied on in its current form. All variables derived from
-          source datasets were included in the calculation with equal rankings. An improved algorithm needs to be
+          expert consensus and therefore, it should not be relied on in its current form. All variables, derived from
+          source datasets, were included in the calculation with equal rankings. An improved algorithm needs to be
           developed based on additional research and the consensus of a multi-disciplinary panel of domain experts
-          including a determination of the relative ranking that different variables should play, and any additional
-          variables needed. The project is limited to the area of Ballarat and surrounds.
+          including a determination of the relative ranking that different variable(s) should play, and any additional
+          variables needed. The project is limited to the area of Ballarat and its surrounds.
         </p>
 
         <br>
@@ -875,7 +922,7 @@
           <tbody>
             <tr>
               <td class="text-bold">Cultural</td>
-              <td>the addition of cultural aspects to land management will preserve ways of life that are spiritually,
+              <td>The addition of cultural aspects to land management will preserve ways of life that are spiritually,
                 and emotionally attached to the land.</td>
             </tr>
             <tr>
@@ -921,17 +968,24 @@
     </div>
     <div class="card my-4 mb-6">
       <div class="card-body">
-        <h3 class="text-center">Implications & Future Direction</h3>
+        <h3 class="text-center">Implications & Future Directions</h3>
         <p>
-          This project was developed within tight limitations and only shows a glimpse of what would be possible taking
-          the concept further and developing it into a decision support tool for agriculture and urban planners. We
-          suggest that the following steps should be taken to achieve this. Firstly, a full literature review should be
-          conducted to search for prior work in developing models for including agricultural considerations into urban
-          planning. Secondly, a multi-disciplinary approach needs to be taken to identify additional data required and
-          to develop an algorithm or model which assigns meaningful weights to the different variable. We suggest the
-          inclusion of datasets such as slope, wetlands, transport network, processing facilities and groundwater levels
-          as a starting point for further development. There is scope for using predicted rainfall to include climate
-          change scenarios. We also envisage that the project should be extended to include all of Australia, which
+          This project was developed within the time limitations and shows a glimpse of what would be possible
+          taking the concept further and developing it into a decision support tool for agriculture and urban planners.
+          We suggest that the following steps should be taken to achieve this.
+        </p>
+        <p>
+          Firstly, a total literature review should be conducted to search for prior work in developing models for
+          including agricultural considerations into urban planning.
+        </p>
+        <p>
+          Secondly, a multi-disciplinary approach needs to be taken to identify additional data required and to develop
+          an algorithm or model that assigns more justify more accurate loadings/weights to the different variable(s).
+        </p>
+        <p>
+          We suggest the inclusion of datasets such as slope, wetlands, transport network, processing facilities and
+          groundwater levels as a starting point for further development. There is scope for using predicted rainfall to
+          include climate change scenarios. We also envisage that the project should be extended nation-wide, which
           would necessitate to federate datasets from various state jurisdictions. Widening the scope to include more
           datasets and a larger geographic area would provide a tool for decision making at national level.
         </p>
