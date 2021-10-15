@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative Land Index | DanFerg </title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+    <script src="https://kit.fontawesome.com/604339e908.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="max-w-6xl mx-auto">
+
+    <main class="flex flex-col gap-32 mb-32 px-4">
+
+        <div class="h-screen flex flex-col items-center justify-between text-center py-8">
+            <!-- Nav Bar -->
+            <nav class="flex justify-between w-full items-center">
+                <!-- Logo -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                          </svg>
+
+                <!-- Nav Links -->
+                <div class="flex gap-6">
+                    <a href="#map">Map</a>
+                    <a href="#stakeholders">Stakeholders</a>
+                    <a href="#impact">Impact</a>
+                    <a href="https://danferg.com">Home</a>
+                </div>
+            </nav>
+
+            <!-- Info -->
+            <div class="flex flex-col">
+                <h1 class="font-black text-5xl md:text-8xl text-gray-800">
+                    Redesigning the way we <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-400">value and manage land.</span>
+                </h1>
+                <a href="https://github.com/DanielFerguson/Innovative-Land-Index" target="_blank" class="bg-gray-800 text-white flex gap-3 text-xl px-4 py-3 rounded-lg mt-8 mx-auto items-center">
+                    View the project
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+
+            <!-- Footer -->
+            <div class="font-light text-gray-400">Innovative Land Index - A Product of GovHack, Team CeRDIfy</div>
+        </div>
+
+        <!-- Map -->
+        <div id="map" class="grid grid-cols-3">
+            <div class="col-span-3 md:col-span-2" id="mapid" style="height: 550px;"></div>
+            <div class="col-span-3 md:col-span-1 p-6 flex flex-col gap-4">
+                <h3 class="text-2xl font-bold">Legend</h3>
+
+                <div class="flex flex-col gap-2">
+                    <h4 class="text-xl">Index Layer</h4>
+                    <div class="flex gap-2 items-center text-gray-700">
+                        <div class="bg-blue-500 rounded-lg h-8 w-8"></div>
+                        More suitable for agricultural use
+                    </div>
+                    <div class="flex gap-2 items-center text-gray-700">
+                        <div class="bg-red-500 rounded-lg h-8 w-8"></div>
+                        Less suitable for agricultural use
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <h4 class="text-xl">Boundaries Layer</h4>
+                    <div class="flex gap-2 items-center text-gray-700">
+                        <div class="bg-green-500 rounded-lg h-8 w-8"></div>
+                        Conservation
+                    </div>
+                    <div class="flex gap-2 items-center text-gray-700">
+                        <div class="bg-black rounded-lg h-8 w-8"></div>
+                        Urban & Infrastructure
+                    </div>
+                    <div class="flex gap-2 items-center text-gray-700">
+                        <div class="border-2 border-red-500 rounded-lg h-8 w-8"></div>
+                        Rural Living Zones
+                    </div>
+                    <div class="flex gap-2 items-center text-gray-700">
+                        <div class="border-2 border-green-500 rounded-lg h-8 w-8"></div>
+                        Agriculture Zones
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stakeholders - who is this for? -->
+        <article id="stakeholders" class="text-center">
+            <h2 class="text-4xl font-bold">Stakeholders</h2>
+            <h3 class="text-lg text-gray-600 mt-4">Who is this for?</h3>
+
+            <div class="mt-16 grid grid-cols-4 gap-8">
+                <div class="col-span-4 md:col-span-2 flex flex-col items-start gap-3">
+                    <div class="p-4 bg-gray-200 rounded-lg shadow">
+                        <i class="far fa-corn"></i>
+                    </div>
+                    <h4 class="text-xl">Agriculture</h4>
+                    <p class="text-gray-600 text-left">
+                        This tool can help farmers and other agricultural decision makers in selecting land based on suitability for agriculture.
+                    </p>
+                </div>
+                <div class="col-span-4 md:col-span-2 flex flex-col items-start gap-3">
+                    <div class="p-4 bg-gray-200 rounded-lg shadow">
+                        <i class="far fa-hammer"></i>
+                    </div>
+                    <h4 class="text-xl">Planning</h4>
+                    <p class="text-gray-600 text-left">
+                        This tool can help regional and town planners to identify areas of potentially higher agricultural production values to take into consideration when making zoning decisions in relation to urban development.
+                    </p>
+                </div>
+                <div class="col-span-4 md:col-span-2 flex flex-col items-start gap-3">
+                    <div class="p-4 bg-gray-200 rounded-lg shadow">
+                        <i class="far fa-users"></i>
+                    </div>
+                    <h4 class="text-xl">Community</h4>
+                    <p class="text-gray-600 text-left">
+                        There is a great community interest in the concept of reducing 'food miles' both in terms of reducing the environmental impact of food transportation as well as providing the community access to the freshest local food. This will happen with better town
+                        planning practices through the use of the index.
+                    </p>
+                </div>
+                <div class="col-span-4 md:col-span-2 flex flex-col items-start gap-3">
+                    <div class="p-4 bg-gray-200 rounded-lg shadow">
+                        <i class="far fa-trees"></i>
+                    </div>
+                    <h4 class="text-xl">Environment</h4>
+                    <p class="text-gray-600 text-left">
+                        Approaching the management of resources such as water supplies, groundwater, wetlands, native flora and fauna require a better understanding of all the complicated factors, such as urban sprawl, competing economic interests and pollution.
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Impact - Why is this important? -->
+        <article id="impact" class="bg-gradient-to-r from-purple-500 to-purple-400 rounded-lg text-white p-8">
+            <h2 class="text-4xl font-bold">Impact</h2>
+            <h3 class="text-lg mt-4">Why is this important?</h3>
+
+            <div class="mt-4">
+                <p>With increasing populations and urban sprawl there are concerns that prime agricultural land is being overtaken by urban development. This poses many problems including:</p>
+
+                <ul class="mt-4 flex flex-col gap-2">
+                    <li>Risks to food security as suitable land for agriculture becomes unavailable forcing agriculture into areas that are less ideal.</li>
+                    <li>When less ideal land is used for agriculture such as into areas of lower rainfall or poorer soil this creates an increased need for irrigation drawing on limited and precious water supplies (groundwater and rivers) as well as increased
+                        need for fertiliser inputs.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <!-- <footer></footer> -->
+
+    <script src="./bounds.js"></script>
+    <script>
+        var boundaries = [
+            [-37.096165664, 143.125102747],
+            [-38.019846669, 144.553809698]
+        ];
+
+        var map = L.map('mapid').setView([-37.5622, 143.8503], 9);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        var img_index = L.imageOverlay('./index.png', boundaries).addTo(map);
+        var img_boundaries = L.imageOverlay('./boundaries.png',
+            boundaries).addTo(map);
+    </script>
+</body>
+
+</html>
